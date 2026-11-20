@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#240c19">
+<meta name="description" content="Годовой Компас — рабочая тетрадь для подведения итогов 2026 года и планов на 2027.">
+<title>Годовой Компас · 2026—2027</title>
+<link rel="stylesheet" href="./style.css">
+<script src="./app.js" defer></script>
+</head>
+<body>
+<div class="atmosphere" aria-hidden="true"><div></div><div></div><div></div></div>
+<header class="top wrap">
+  <a class="brand" href="#home"><span class="emblem" aria-hidden="true">✧</span> Годовой Компас</a>
+  <nav aria-label="Разделы сайта"><a href="#home" id="nav-home">Главная</a><a href="#chapter-0" id="nav-work">Тетрадь</a></nav>
+  <span class="edition">2026 <span>—</span> 2027</span>
+</header>
+<main class="wrap">
+  <section id="home" aria-labelledby="home-title">
+    <div class="hero">
+      <div class="hero-visual" aria-hidden="true"></div>
+      <span class="hero-index" aria-hidden="true">✦</span>
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> Рабочая тетрадь</p>
+        <h1 id="home-title">Годовой<br><em>Компас</em></h1>
+        <p class="hero-description">Подведи итоги 2026 года<br class="desktop"> и выбери своё направление на 2027.</p>
+        <a class="button primary" id="start" href="#chapter-0">Открыть тетрадь <span aria-hidden="true">✧</span></a>
+      </div>
+      <span class="hero-note">ПОДВЕСТИ ИТОГИ · ВЫБРАТЬ НАПРАВЛЕНИЕ</span>
+    </div>
+    <section class="overview" aria-labelledby="overview-title">
+      <div class="overview-heading">
+        <div><h2 id="overview-title">Твой маршрут</h2><p>Две части, чтобы оглянуться назад и посмотреть вперёд.</p></div>
+        <div class="progress home-progress">
+          <div class="progress-label"><span>Прогресс <span class="completion-star" aria-hidden="true">✦</span></span><strong data-progress-count></strong></div>
+          <div class="progress-track" data-progress role="progressbar" aria-label="Прогресс тетради" aria-valuemin="0" aria-valuemax="14"><div></div></div>
+        </div>
+      </div>
+      <div class="parts" id="parts"></div>
+    </section>
+  </section>
+  <section id="workbook" hidden aria-label="Рабочая тетрадь">
+    <div class="work-layout">
+      <aside class="sidebar">
+        <div class="progress">
+          <div class="progress-label"><span>Прогресс <span class="completion-star" aria-hidden="true">✦</span></span><strong data-progress-count></strong></div>
+          <div class="progress-track" data-progress role="progressbar" aria-label="Прогресс тетради" aria-valuemin="0" aria-valuemax="14"><div></div></div>
+          <p id="progress-status" class="sr-only" aria-live="polite"></p>
+        </div>
+        <label class="chapter-picker">Перейти к разделу <select id="chapters-mobile"></select></label>
+        <nav id="chapters" aria-label="Разделы тетради"></nav>
+        <button class="button secondary sidebar-pdf" type="button" data-download>Скачать PDF</button>
+      </aside>
+      <article id="exercise"></article>
+    </div>
+  </section>
+  <section id="final" hidden aria-labelledby="final-title">
+    <div class="final-stage">
+      <div class="final-compass" aria-hidden="true">
+        <i>✦</i><i>✧</i><i>✦</i><i>✧</i><i>✦</i>
+        <div class="dial"><span>С</span><span>В</span><span>Ю</span><span>З</span><b class="needle"></b></div>
+      </div>
+      <div class="final-message">
+        <h1 id="final-title" tabindex="-1">Ты выбрал(а) направление.</h1>
+        <p>Ты подвёл(а) итоги. Ты увидел(а) путь.</p>
+        <p class="final-small">Сделай глубокий вдох. Поблагодари себя.<br>Ты готов(а) идти дальше.</p>
+      </div>
+      <div class="final-actions">
+        <button type="button" class="button primary" data-download>Скачать PDF</button>
+        <a class="button secondary" href="#chapter-13">Вернуться к тетради</a>
+      </div>
+    </div>
+  </section>
+  <p id="download-status" role="status" aria-live="polite" hidden></p>
+</main>
+<footer class="wrap footer"><a href="#home">✧ &nbsp; Годовой Компас</a><span>Рабочая тетрадь · 2026–2027</span></footer>
+</body>
+</html>
